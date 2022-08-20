@@ -1,0 +1,49 @@
+body {
+    width: 100%;
+    padding-bottom: 8rem;
+}
+
+.todo-form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+@media screen and (max-width: 768px) {
+    .todo-form {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .todo-form {
+        width: 90%;
+    }
+}
+
+
+.btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #fff;
+}
+
+.add-btn:hover {
+    background-color: brown;
+}
+
+#title, #desc {
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid black;
+    margin: 0.5rem;
+    padding: 0.3rem;
+}
+
+#title:focus, #desc:focus {
+    background-color: rgba(128, 128, 128, 0.2);
+}
